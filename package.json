@@ -1,0 +1,17 @@
+{
+  "name": "meme-search",
+  "version": "1.0.0",
+  "description": "meme search backend",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Setanjan Roy",
+  "license": "ISC"
+}
