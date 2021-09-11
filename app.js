@@ -12,8 +12,8 @@ global.nodeCache = new NodeCache();
 
 
 app.post('/api/search',async (req,res)=>{
-        const searchParam = req.body.search;
-        // console.log(searchParam)
+        const searchParam = req.body.search.toLowerCase()
+        //console.log(searchParam)
         const finalURL = BASE_URL+"search?q="+searchParam;
         let imgArray = []
         try {
