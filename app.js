@@ -3,8 +3,10 @@ const app = express()
 const axios = require('axios')
 const cheerio = require('cheerio')
 const BASE_URL="http://knowyourmeme.com/";
+const bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
-
+app.use(bodyParser.json({ limit: "50mb" }));
+app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
 app.post('/api/search',async (req,res)=>{
         const searchParam = req.body.search;
