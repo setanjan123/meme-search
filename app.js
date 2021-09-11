@@ -35,7 +35,7 @@ app.post('/api/search',async (req,res)=>{
               })  
         } catch(e) {
               console.log('Error '+e.toString())
-              return res.status(500).json({
+              return res.status(200).json({
                 "messages": [
                   {"text": "Sorry could not find your meme. Please search again"},
                 ]
