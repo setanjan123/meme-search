@@ -3,6 +3,7 @@ const app = express()
 const axios = require('axios')
 const cheerio = require('cheerio')
 const BASE_URL="http://knowyourmeme.com/";
+const port = process.env.PORT || 3000;
 
 
 app.get('/api/:search',async (req,res)=>{
@@ -31,6 +32,6 @@ app.get('/api/:search',async (req,res)=>{
        
 })
 
-app.listen(3000,()=>{
-     console.log('Listening on 3000')
+app.listen(port,()=>{
+     console.log('Listening on '+port)
 })
