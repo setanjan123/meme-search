@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
 app.post('/api/search',async (req,res)=>{
         const searchParam = req.body.search;
+        console.log(searchParam)
         const finalURL = BASE_URL+"search?q="+searchParam;
         try {
             let response = await axios.get(finalURL);
