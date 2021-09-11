@@ -22,9 +22,17 @@ app.post('/api/search',async (req,res)=>{
             $ = cheerio.load(response.data);
             const img = $('meta[property="og:image"]').attr('content')
             return res.status(200).json({
-                   status:200,
-                   data:{url:img}
-            })
+                "messages": [
+                  {
+                    "attachment": {
+                      "type": "image",
+                      "payload": {
+                        "url": img
+                      }
+                    }
+                  }
+                ]
+              })  
         } catch(e) {
               console.log('Error '+e.toString())
               return res.status(500).json({
