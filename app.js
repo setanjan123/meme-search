@@ -6,8 +6,8 @@ const BASE_URL="http://knowyourmeme.com/";
 const port = process.env.PORT || 3000;
 
 
-app.get('/api/:search',async (req,res)=>{
-        const searchParam = req.params.search;
+app.post('/api/search',async (req,res)=>{
+        const searchParam = req.body.search;
         const finalURL = BASE_URL+"search?q="+searchParam;
         try {
             let response = await axios.get(finalURL);
