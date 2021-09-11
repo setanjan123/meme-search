@@ -20,7 +20,7 @@ app.get('/api/:search',async (req,res)=>{
             const img = $('meta[property="og:image"]').attr('content')
             return res.status(200).json({
                    status:200,
-                   data:img
+                   data:{url:img}
             })
         } catch(e) {
               console.log('Error '+e.toString())
