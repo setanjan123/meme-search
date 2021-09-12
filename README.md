@@ -3,6 +3,6 @@
 Light backend written in Node that queries the Internet Meme Database.
 
 Was Hosted on Heroku and Integrated with a Chatbot built in Chatfuel :
+![download](https://user-images.githubusercontent.com/33147933/132969952-0789c041-9e69-4690-ab85-0e7871c5519d.png)
 
-![132940657-dc1b236a-141d-4ca1-ad39-b877fcfbfdee](https://user-images.githubusercontent.com/33147933/132946251-d19a40b7-063d-43f3-a495-5a9e1e735f37.png)
 
