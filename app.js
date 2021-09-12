@@ -10,7 +10,7 @@ global.nodeCache = new NodeCache();
 
 app.get('/api/search',async (req,res)=>{
         const searchParam = req.query.q.toLowerCase()
-        //console.log(searchParam)
+        // console.log(searchParam)
         const finalURL = BASE_URL+"search?q="+searchParam;
         let imgArray = []
         try {
@@ -33,11 +33,11 @@ app.get('/api/search',async (req,res)=>{
               global.nodeCache.set(searchParam,imgArray,86400)
             }
             const index = Math.floor(Math.random()*imgArray.length)
-            const randomUrl = BASE_URL+imgArray[index].url
             let img
             if(imgArray[index].top === true ) {
-                img = randomUrl
+                img = imgArray[index].url
             } else {
+                const randomUrl = BASE_URL+imgArray[index].url
                 if(global.nodeCache.has(randomUrl)) {
                   img = global.nodeCache.get(randomUrl)
               } else {
